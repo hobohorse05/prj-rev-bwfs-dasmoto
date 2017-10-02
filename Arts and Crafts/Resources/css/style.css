@@ -1,3 +1,7 @@
+html{
+  background-image: url("http://designwoop.com/uploads/2012/03/12_free_subtle_textures_free_web_backgrounds.jpg");
+}
+
 .head1{
   font-family: Helvetica;
   font-size: 100px;
@@ -13,6 +17,7 @@
   font-weight: bold;
   color: white;
   background-color: mediumspringgreen;
+  opacity: 0.65;
 }
 
 .head3{
@@ -27,10 +32,19 @@
   color: blue;
 }
 
-#frames{
+#frames, #videos{
   background-color: lightcoral;
 }
 
-#paint{
+#paint, #rewards{
   background-color: skyblue;
+}
+
+#shoping{
+  background-color: DarkSalmon;
+}
+
+#links, #adress{
+  font-size: 20px;
+  color: maroon;
 }

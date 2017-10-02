@@ -6,7 +6,15 @@
     <link href="./Resources/css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+    <div id="links">
+    <a href="./index.html">Home</a><span> </span><a href="./Purchase-info.html">Purchase-info</a><span> </span><a href="./types-of-art.html">Types-Of_Art</a>
+  </div>
 <h1 class="head1">Dasmoto's Arts &<br /> Crafts</h1>
+
+<!-- Shopping  -->
+
+<h2 class="head2" id="shoping">Shoping</h2>
+<button type="button" onclick="cart()">Current Shopping Cart</button>
 
 <!-- Brushes -->
 
@@ -16,6 +24,10 @@
 <div>Made of the highest quality oak, Hacksaw brushes are known for their weight and ability to hold paint in large amounts.
   Available in different sizes. <span class="price">Starting at $3.00 / brush.</span>
 </div>
+<div>
+  <br />
+  <button type="button" onclick="brushs()">Add To Cart</button>
+</div>
 
 <!-- Frames -->
 
@@ -23,13 +35,65 @@
 <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/frames.jpeg">
 <h3 class="head3">Art Frames (assorted)</h3>
 <div>Assorted frames made of different material, including MDF, birchwood, and PDE.
-  Select frames can be sanded and painted according to your needs. <span class="price">Starting at $2.00 / frame.</span></div>
+  Select frames can be sanded and painted according to your needs. <span class="price">Starting at $2.00 / frame.</span>
+</div>
+<div>
+  <br />
+  <button type="button" onclick="frames()">Add To Cart</button>
+</div>
 
 <!-- Paint -->
+
 <h2 class="head2" id="paint">Paint</h2>
 <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/finnish.jpeg">
 <h3 class="head3">Clean Finnish Paint</h3>
 <div>Imported paint from Finland. Over 256 colors available in-store, varying in quantity (1 oz. to 8 oz.).
-  Clean Finnish paint microbinds to canvas, increasing the finish and longevity of any artwork. <span class="price">Starting at $5.00 / tube.</span></div>
+  Clean Finnish paint microbinds to canvas, increasing the finish and longevity of any artwork. <span class="price">Starting at $5.00 / tube.</span>
+</div>
+<div>
+  <br />
+<button type="button" onclick="paints()">Add To Cart</button>
+</div>
   </body>
+  <script>
+
+//I know this is really badly done, but frankly I dont know any better, I was just having a bit of fun with this and seeing what I could
+//Do with my very little previous experience, most of this I figured out how to do as I was doing it, I only really understood
+//variables and things like that beforehand (also how to make buttons). That is why I implamented everything by buttons, so I did not
+//Have to worry about spacing and things like that because I have no idea how to do that.
+//I tried many other ideas using the <script> tag but none of them seemed to work well so I gave up and just did this
+//Don't judge me too hardly at how messy I am sure this is.
+
+//functions
+
+
+  function brushs(){
+    alert("You have added this brush to your cart!");
+    brush++;
+  }
+
+  function frames(){
+    alert("You have added this frame to your cart!");
+    frame++;
+  }
+
+  function paints(){
+    alert("You have added this paint to your cart!");
+    paint++;
+  }
+
+  function cart(){
+    alert((brush) + "x Brushes ($3.00 each)       " + (frame) + "x Frames ($2.00 each)       " + (paint) + "x Clean finnish paints ($5.00 each)");
+    var truebrush=(brush * 3);
+    var trueframe=(frame * 2);
+    var truepaint=(paint * 5);
+    var total=((truebrush) + (trueframe) + (truepaint));
+    alert("$" + (total) + " total");
+}
+
+  //variables
+var brush=0;
+var frame=0;
+var paint=0;
+  </script>
 </html>
